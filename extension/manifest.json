@@ -1,0 +1,26 @@
+{
+    "name": "Youtube Video Downlaoder V2",
+    "description": "",
+    "version": "0.1",
+    "manifest_version": 3,
+    "icons": {
+        "32": "/images/icon32.png",
+        "48": "/images/icon48.png",
+        "128": "/images/icon128.png"
+    },
+    "action": {
+        "default_popup": "/views/popup.html",
+        "default_icon": {
+            "32": "/images/icon32.png",
+            "48": "/images/icon48.png",
+            "128": "/images/icon128.png"
+        }
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://www.youtube.com/*"],
+            "js": ["/content_script.js"]
+        }
+    ],
+    "host_permissions": ["https://www.youtube.com/"]
+}
